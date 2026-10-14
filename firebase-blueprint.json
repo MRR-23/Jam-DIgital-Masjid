@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "MosqueSettings": {
+      "title": "MosqueSettings",
+      "description": "General configuration and preferences for the mosque digital TV display",
+      "type": "object",
+      "properties": {
+        "mosqueName": { "type": "string" },
+        "address": { "type": "string" },
+        "city": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "hijriAdjustment": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["mosqueName", "updatedAt"]
+    },
+    "MurattalProgress": {
+      "title": "MurattalProgress",
+      "description": "Real-time reading and playback progress of 30 Juz Murattal",
+      "type": "object",
+      "properties": {
+        "currentJuz": { "type": "number" },
+        "currentSurah": { "type": "number" },
+        "currentSurahName": { "type": "string" },
+        "currentAyah": { "type": "number" },
+        "playbackSeconds": { "type": "number" },
+        "isPlaying": { "type": "boolean" },
+        "lastUpdated": { "type": "string" }
+      },
+      "required": ["currentJuz", "currentSurah", "lastUpdated"]
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "MosqueSettings",
+      "description": "Global settings for mosque clock and display"
+    },
+    "/murattal_progress/{progressId}": {
+      "schema": "MurattalProgress",
+      "description": "Synced 30 juz murattal progress state"
+    }
+  }
+}

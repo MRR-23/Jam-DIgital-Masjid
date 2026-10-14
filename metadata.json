@@ -1,0 +1,6 @@
+{
+  "name": "Jam Digital TV Masjid Jami Al-Mujahidin",
+  "description": "Sistem Jam Digital TV Masjid otomatis dengan jadwal sholat akurat, running text, hitung mundur iqamah, doa setelah adzan, murattal Jumat otomatis 30 juz, slide media nirkabel, dan sinkronisasi cloud Firebase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
